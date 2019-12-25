@@ -313,7 +313,13 @@ body {
 }
 
 .header {
-    background-color: #3a8a55;
+    /* background-color: #3a8a55; */
+    background-image: -webkit-gradient(linear,
+            left,
+            right,
+            from(#548c4a),
+            to(#097e59));
+    background-image: linear-gradient(to right, #548c4a, #097e59);
     padding: 0 5rem;
     height: 8rem;
     position: relative;
@@ -982,10 +988,14 @@ body {
 }
 
 .nav__el:hover,
-.nav__el:active {
+.nav__el:active,
+.header__logo:hover,
+.header__logo:active {
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
     text-shadow: 0 0.7rem 1rem black;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .nav__el:not(:last-child) {
@@ -999,7 +1009,8 @@ body {
     }
 }
 
-.nav__el:focus {
+.nav__el:focus,
+.header__logo:focus {
     outline: none;
 }
 
