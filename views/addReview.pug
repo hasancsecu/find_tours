@@ -1,0 +1,17 @@
+extends base
+
+block content
+    main.main
+        .login-form
+            h2.heading-secondary.ma-bt-lg Add A Review on #{tour.name} Tour
+            form.form
+            .form__group
+                label.form__label(for='text') Rating
+                input#rating.form__input(type='text', placeholder='Rating (1 to 5)', required)
+            .form__group.ma-bt-md
+                label.form__label(for='textarea') Review
+                textarea#review.form__input(placeholder='Your review...', rows="6", required)
+            .form__group
+                button#btnAddReview.btn.btn--green Add Review
+                
+                

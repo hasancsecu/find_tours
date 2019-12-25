@@ -1,0 +1,14 @@
+extends base
+
+block content
+    main.main
+        .login-form
+            h2(style='margin-bottom: 10px;color: #ff7730;font-size: 2.9rem;text-align: center;') Activate Your Account
+            h2.heading-secondary.ma-bt-md Enter the code below
+           
+            form.form
+            .form__group
+                label.form__label(for='text') Confirmation Code
+                input#code.form__input(type='text', placeholder='6 Digit Code', required)
+            .form__group
+                button#confirmBtn.btn.btn--green.ma-bt-md Submit
