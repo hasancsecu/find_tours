@@ -20,11 +20,11 @@ const bookingRouter = require('./routes/bookingRoutes');
 const app = express();
 
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 
 //Golbal MIDDLEWARE
 //Serving static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //Set HTTP Security header
 app.use(helmet());
