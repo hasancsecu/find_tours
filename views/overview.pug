@@ -1,14 +1,14 @@
 extends base
 
 block content
-  main.main
-      .card-container
+    main.main
+        .card-container
             each tour in tours
                 .card
                     .card__header
                         .card__picture
                             .card__picture-overlay &nbsp;
-                            img.card__picture-img(src=`img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+                            img.card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
                         h3.heading-tertirary
                             span= tour.name
                     .card__details
@@ -39,3 +39,14 @@ block content
                             span.card__footer-value= tour.ratingsAverage
                             span.card__footer-text=  ` rating (${tour.ratingsQuantity})`
                         a.btn.btn--green.btn--small(href=`/tours/${tour._id}`) Details
+
+        .results__pages
+            button.btn-inline.results__btn--prev
+                span Page 1
+                svg.search__icon
+                    use(href="/img/icons.svg#icon-triangle-left")
+                                   
+            button.btn-inline.results__btn--next
+                span Page 3
+                svg.search__icon
+                    use(href="/img/icons.svg#icon-triangle-right")
